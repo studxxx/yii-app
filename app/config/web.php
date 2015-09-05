@@ -3,8 +3,9 @@
 return array(
     // path aliases
     'aliases' => array(
-        'bootstrap' => 'vendor.crisu83.yiistrap',
+        'booster' => 'vendor.clevertech.yii-booster.src',
     ),
+    'preload' => array('booster'),
     // application behaviors
     'behaviors' => array(
         'maintain' => array(
@@ -20,8 +21,8 @@ return array(
     ),
     // application components
     'components' => array(
-        'bootstrap' => array(
-            'class' => 'bootstrap.components.TbApi',
+        'booster' => array(
+            'class' => 'Frontend',
         ),
         'log' => array(
             'routes' => array(
@@ -35,6 +36,7 @@ return array(
             'urlFormat' => 'path',
             'showScriptName' => false,
             'rules' => array(
+                '/'=>'site/index',
                 '<controller:\w+>/<id:\d+>' => '<controller>/view',
                 '<controller:\w+>/<action:\w+>/<id:\d+>' => '<controller>/<action>',
                 '<controller:\w+>/<action:\w+>' => '<controller>/<action>',

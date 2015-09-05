@@ -1,15 +1,19 @@
 <?php /* @var $this Controller */ ?>
+<?php /* @var $content string */ ?>
 <!DOCTYPE html>
 <html lang="en">
 <?php $this->renderPartial('app.views.layouts._head'); ?>
 <body class="layout-main">
 <?php $this->widget(
-    'bootstrap.widgets.TbNavbar',
+    'booster.widgets.TbNavbar',
     array(
-        'collapse' => true,
+//        'collapse' => true,
+        'fixed' => false,
+//        'fluid' => true,
         'items' => array(
             array(
-                'class' => 'bootstrap.widgets.TbNav',
+                'class' => 'booster.widgets.TbMenu',
+                'type' => 'navbar',
                 'items' => array(
                     array('label' => 'Home', 'url' => array('/site/index')),
                     array('label' => 'About', 'url' => array('/site/page', 'view' => 'about')),
@@ -37,7 +41,7 @@
 
     <?php if (!empty($this->breadcrumbs)): ?>
         <?php $this->widget(
-            'bootstrap.widgets.TbBreadcrumb',
+            'booster.widgets.TbBreadcrumbs',
             array(
                 'links' => $this->breadcrumbs,
             )

@@ -7,8 +7,5 @@
     <link rel="icon" href="<?php echo baseUrl('/favicon.ico'); ?>" type="image/x-icon"/>
     <title><?php echo e($this->pageTitle); ?></title>
     <?php css('css/main.css'); ?>
-    <?php css('css/responsive.css'); ?>
     <?php js('js/main.js'); ?>
-    <?php app()->bootstrap->registerAllScripts(); ?>
-    <?php app()->bootstrap->registerYiistrapCss(); ?>
 </head>

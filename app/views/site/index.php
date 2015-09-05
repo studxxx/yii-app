@@ -5,7 +5,7 @@ $this->pageTitle = app()->name;
 ?>
 
 <?php $this->beginWidget(
-    'bootstrap.widgets.TbHeroUnit',
+    'booster.widgets.TbJumbotron',
     array(
         'heading' => 'Welcome to ' . e(Yii::app()->name),
     )

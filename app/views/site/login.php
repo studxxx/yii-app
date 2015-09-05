@@ -12,19 +12,19 @@ $this->pageTitle = app()->name . ' - Login';
     <div class="login-form">
 
         <?php $form = $this->beginWidget(
-            'bootstrap.widgets.TbActiveForm',
+            'booster.widgets.TbActiveForm',
             array(
                 'id' => 'login-form',
             )
         ); ?>
 
         <fieldset>
-            <?php echo $form->textFieldControlGroup(
+            <?php echo $form->textFieldGroup(
                 $model,
                 'username',
                 array('block' => true, 'label' => false, 'placeholder' => 'Username')
             ); ?>
-            <?php echo $form->passwordFieldControlGroup(
+            <?php echo $form->passwordFieldGroup(
                 $model,
                 'password',
                 array('block' => true, 'label' => false, 'placeholder' => 'Password')

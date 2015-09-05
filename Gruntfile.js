@@ -38,25 +38,25 @@ module.exports = function (grunt) {
                 ]
             }
         },
-        less: {
-            dev: {
-                files: {
-                    "environments/dev/web/css/main.css": "app/less/main.less",
-                    "environments/dev/web/css/responsive.css": "app/less/responsive.less"
-                }
-            },
-            prod: {
-                options: {
-                    compress: true,
-                    yuicompress: true,
-                    optimization: 2
-                },
-                files: {
-                    "environments/prod/web/css/main.css": "app/less/main.less",
-                    "environments/prod/web/css/responsive.css": "app/less/responsive.less"
-                }
-            }
-        },
+        //less: {
+        //    dev: {
+        //        files: {
+        //            "environments/dev/web/css/main.css": "app/less/main.less",
+        //            "environments/dev/web/css/responsive.css": "app/less/responsive.less"
+        //        }
+        //    },
+        //    prod: {
+        //        options: {
+        //            compress: true,
+        //            yuicompress: true,
+        //            optimization: 2
+        //        },
+        //        files: {
+        //            "environments/prod/web/css/main.css": "app/less/main.less",
+        //            "environments/prod/web/css/responsive.css": "app/less/responsive.less"
+        //        }
+        //    }
+        //},
         watch: {
             styles: {
                 files: [
@@ -85,7 +85,7 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-closure-compiler');
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-copy');
-    grunt.loadNpmTasks('grunt-contrib-less');
+    //grunt.loadNpmTasks('grunt-contrib-less');
     grunt.loadNpmTasks('grunt-contrib-watch');
 
     // Define tasks

@@ -12,7 +12,9 @@ $this->breadcrumbs = array(
     <h1>Contact</h1>
 
     <?php if (user()->hasFlash('contact')): ?>
-        <?php $this->widget('bootstrap.widgets.TbAlert', array('alerts' => array('contact' => array()))); ?>
+        <?php $this->widget('booster.widgets.TbAlert', array(
+            'alerts' => array('contact' => array())
+        )); ?>
     <?php else: ?>
 
     <p>
@@ -22,10 +24,10 @@ $this->breadcrumbs = array(
     <div class="form">
 
         <?php $form = $this->beginWidget(
-            'bootstrap.widgets.TbActiveForm',
+            'booster.widgets.TbActiveForm',
             array(
                 'id' => 'contact-form',
-                'layout' => TbHtml::FORM_LAYOUT_HORIZONTAL,
+                'type' => TbHtml::FORM_LAYOUT_HORIZONTAL,
                 'enableClientValidation' => true,
                 'clientOptions' => array(
                     'validateOnSubmit' => true,
@@ -37,13 +39,13 @@ $this->breadcrumbs = array(
 
         <?php echo $form->errorSummary($model); ?>
 
-        <?php echo $form->textFieldControlGroup($model, 'name'); ?>
+        <?php echo $form->textFieldGroup($model, 'name'); ?>
 
-        <?php echo $form->textFieldControlGroup($model, 'email'); ?>
+        <?php echo $form->textFieldGroup($model, 'email'); ?>
 
-        <?php echo $form->textFieldControlGroup($model, 'subject', array('size' => 60, 'maxlength' => 128)); ?>
+        <?php echo $form->textFieldGroup($model, 'subject', array('size' => 60, 'maxlength' => 128)); ?>
 
-        <?php echo $form->textAreaControlGroup($model, 'body', array('rows' => 6, 'class' => 'span8')); ?>
+        <?php echo $form->textAreaGroup($model, 'body', array('rows' => 6, 'class' => 'span8')); ?>
 
         <div class="form-actions">
             <?php echo TbHtml::submitButton('Submit', array('color' => TbHtml::BUTTON_COLOR_PRIMARY)); ?>
